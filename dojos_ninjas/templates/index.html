@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Dojo</h1>
+        <form action="/dojos/create" method="post">
+            <p>
+                Name:
+                <input type="text" name="dojo" id="">
+            </p>
+            <button type="submit">Create</button>
+        </form>
+    <div>
+        {% for dojo in dojos %}
+            <h1>
+                <a href="/dojos/{{dojo.id}}">{{dojo.name}}</a>
+            </h1>
+        {% endfor %}
+    </div>
+    <a href="/ninjas">Add New Ninja</a>
+</body>
+</html>

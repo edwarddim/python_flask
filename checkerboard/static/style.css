@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 100%;
+    text-align: center
+}
+.color1{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: none;
+}
+.color2{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: none;
+}
+.row{
+    display:block;
+
+}

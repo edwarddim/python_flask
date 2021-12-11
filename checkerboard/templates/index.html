@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lange="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Checkerboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome to Checkerboard</h1>
+        {% for x in range(1, row+1): %}
+            <div class="row">
+                {% for y in range(1, column+1)%}
+                    <div class="color{{ (x+y)%2+1 }}"></div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

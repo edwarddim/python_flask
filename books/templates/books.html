@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BOOKS</h1>
+    <form action="/books/create" method="post">
+        <p>
+            Title:
+            <input type="text" name="title" id="">
+        </p>
+        <p>
+            Num of Pages:
+            <input type="number" name="pages" id="">
+        </p>
+        <button type="submit">Create</button>
+    </form>
+    <div>
+        {% for book in books %}
+            <h2>
+                <a href="/books/{{book.id}}">{{book.title}}</a>
+            </h2>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
